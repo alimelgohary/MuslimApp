@@ -7,7 +7,7 @@ void main() {
   //   WidgetsFlutterBinding.ensureInitialized();
   //   FlutterError.onError = (FlutterErrorDetails details) {
   //     FlutterError.dumpErrorToConsole(details);
-  //     runApp(MaterialApp(home: Scaffold(body:Center(child:Text('$details', style: TextStyle(color: Colors.orangeAccent),)))));
+  //     runApp(MaterialApp(home: Scaffold(body:Center(child:Text('$details', style: TextStyle(color: Colors.blue),)))));
   //   };
     runApp(MyApp());
   // }, (Object error, StackTrace stack) {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // builder: (BuildContext context, Widget? widget) {
       //   ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-      //     return Scaffold(body: Center(child: Text('$errorDetails')));
+      //     return Scaffold(body: Center(child: Text('$errorDetails', style: TextStyle(color: Colors.green),)));
       //   };
       //   return widget!;
       // },
