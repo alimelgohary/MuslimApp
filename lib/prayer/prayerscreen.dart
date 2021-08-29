@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:muslimapp/prayer/prayermodel.dart';
 import 'package:muslimapp/prayer/prayerservice.dart';
 import 'package:muslimapp/utils.dart';
@@ -20,18 +21,29 @@ class _PrayerScreenState extends State<PrayerScreen> {
   List<String> salawat = [];
   int currentDay = 0;
   void getPrayerList() async {
-    prayerList = await PrayerService().getList(widget.city, widget.method);
-    currentDay = getCurrentDate()[0] - 1;
-    salawat = ['الفجر', 'الشروق', 'الظهر', 'العصر', 'المغرب', 'العشاء'];
-    times = [
-      removeTimeZone(prayerList[currentDay].timings.fajr),
-      removeTimeZone(prayerList[currentDay].timings.sunrise),
-      removeTimeZone(prayerList[currentDay].timings.dhuhr),
-      removeTimeZone(prayerList[currentDay].timings.asr),
-      removeTimeZone(prayerList[currentDay].timings.maghrib),
-      removeTimeZone(prayerList[currentDay].timings.isha)
-    ];
-    setState(() {});
+    if(await internetConnected()) {
+      prayerList = await PrayerService().getList(widget.city, widget.method);
+      currentDay = getCurrentDate()[0] - 1;
+      salawat = ['الفجر', 'الشروق', 'الظهر', 'العصر', 'المغرب', 'العشاء'];
+      times = [
+        removeTimeZone(prayerList[currentDay].timings.fajr),
+        removeTimeZone(prayerList[currentDay].timings.sunrise),
+        removeTimeZone(prayerList[currentDay].timings.dhuhr),
+        removeTimeZone(prayerList[currentDay].timings.asr),
+        removeTimeZone(prayerList[currentDay].timings.maghrib),
+        removeTimeZone(prayerList[currentDay].timings.isha)
+      ];
+      setState(() {});
+    }
+    else{
+      Fluttertoast.showToast(
+          msg: "فشل الإتصال بالإنترنت",
+          toastLength: Toast.LENGTH_LONG,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 3
+      );
+      goBack(context);
+    }
   }
 
   @override
