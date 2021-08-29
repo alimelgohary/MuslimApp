@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:muslimapp/azkar/catscreen.dart';
-import 'package:muslimapp/azkar/azkarscreen.dart';
 import 'package:muslimapp/screens/msbha.dart';
 import 'package:muslimapp/widgets.dart';
 import 'package:muslimapp/prayer/prayerscreen.dart';

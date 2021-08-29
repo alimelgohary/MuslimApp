@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:muslimapp/prayer/choosecity.dart';
 
@@ -20,12 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (BuildContext context, Widget? widget) {
-        ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-          return Scaffold(body: Center(child: Text('$errorDetails')));
-        };
-        return widget!;
-      },
+      // builder: (BuildContext context, Widget? widget) {
+      //   ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+      //     return Scaffold(body: Center(child: Text('$errorDetails')));
+      //   };
+      //   return widget!;
+      // },
       debugShowCheckedModeBanner: false,
       title: 'تطبيق المسلم',
       theme: ThemeData(

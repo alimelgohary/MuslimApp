@@ -3,8 +3,6 @@ import 'package:muslimapp/prayer/prayermodel.dart';
 import 'package:muslimapp/prayer/prayerservice.dart';
 import 'package:muslimapp/utils.dart';
 import 'package:muslimapp/widgets.dart';
-import 'package:sqflite/sqflite.dart';
-
 import 'choosecity.dart';
 
 class PrayerScreen extends StatefulWidget {

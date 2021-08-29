@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:muslimapp/azkar/azkarService.dart';
-//import 'package:muslimapp/azkar/azkarService.dart';
 import 'package:muslimapp/utils.dart';
 import 'package:muslimapp/widgets.dart';
 

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslimapp/prayer/cityservice.dart';
-import 'package:muslimapp/prayer/prayerscreen.dart';
 import 'package:muslimapp/utils.dart';
 import 'package:muslimapp/screens/homescreen.dart';
-import 'package:sqflite/sqflite.dart';
-import '../widgets.dart';
 import 'countryservice.dart';
 import 'methodservice.dart';
 

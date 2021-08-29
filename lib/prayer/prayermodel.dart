@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final prayer = prayerFromJson(jsonString);
-
 import 'dart:convert';
 
 List<PrayerModel> prayerFromJson(String str) => List<PrayerModel>.from(json.decode(str).map((x) => PrayerModel.fromJson(x)));

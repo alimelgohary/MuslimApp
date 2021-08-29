@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:muslimapp/azkar/azkarService.dart';
 import 'package:muslimapp/azkar/azkarscreen.dart';
 import 'package:muslimapp/widgets.dart';
-import 'package:sqflite/sqflite.dart';
 import '../utils.dart';
 
 class CategoryScreen extends StatefulWidget {
