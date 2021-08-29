@@ -4,4 +4,4 @@ First tool is azkar which gets azkar from a local database
 
 Second tool is Prayer Times which uses aladhan api to get prayer times according to a chosen method
 
-third tool is a simple sebha / masbha
+Third tool is a simple sebha / masbha
