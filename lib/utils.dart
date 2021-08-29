@@ -47,10 +47,9 @@ void goBack(BuildContext context) {
 }
 
 void goWithoutBack(BuildContext context, Widget m) {
-  Navigator.pushReplacement(
-    context,
-    MaterialPageRoute(builder: (context) => m),
-  );
+  Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(builder: (context) => m),
+      (Route<dynamic> route) => false);
 }
 
 Future<void> showMyDialog(
@@ -137,16 +136,27 @@ ButtonStyle elevatedButtonStyle() {
     ),
   );
 }
+
 // '04:55 (EET)' to '04:55'
-String removeTimeZone(String s){
+String removeTimeZone(String s) {
   int n = s.indexOf('(');
-  return s.substring(0, n-1);
+  return s.substring(0, n - 1);
 }
 
-String? getMonthArabic(int n){
+String? getMonthArabic(int n) {
   Map<int, String> m = {
-    1: 'يناير', 2: 'فبراير', 3: 'مارس', 4: 'إبريل', 5: 'مايو', 6: 'يونيو', 7: 'يوليو', 8: 'أغسطس', 9: 'سبتمبر', 10: 'أكتوبر', 11: 'نوفمبر', 12: 'ديسمبر'
+    1: 'يناير',
+    2: 'فبراير',
+    3: 'مارس',
+    4: 'إبريل',
+    5: 'مايو',
+    6: 'يونيو',
+    7: 'يوليو',
+    8: 'أغسطس',
+    9: 'سبتمبر',
+    10: 'أكتوبر',
+    11: 'نوفمبر',
+    12: 'ديسمبر'
   };
   return m[n];
 }
-
